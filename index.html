@@ -1,11 +1,354 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Simens Kokebok</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-    Hei
+    <div class="wrapper">
+        <nav>
+            <div class="container">
+                <div class="nav-section">
+                    <div class="logo">
+                        <img src="media/spring_onion_logo.png" alt="">
+                        <i class="fa-solid fa-seedling"></i>
+                        <i class="fa-solid fa-x"></i>
+                    </div>
+                    <div class="nav-links">
+                        <ul>
+                            <li><a href="#">Hjem</a></li>
+                            <li><a href="#recipes">Oppskrifter</a></li>
+                            <li><a href="#about">Om oss</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <button class="cart">
+                    <img src="media/Shopping_Cart_Icon_PNG_Clipart.png" alt="">
+                    <p class="counter">x</p>
+                </button>
+            </div>
+        </nav>
+
+        <div class="nav-links-menu">
+            <ul>
+                <li><a href="#">Hjem</a></li>
+                <li><a href="#recipe-grid">Oppskrifter</a></li>
+                <li><a href="#">Favoritter</a></li>
+                <li><a href="#footer">Om oss</a></li>
+            </ul>
+        </div>
+
+        <section class="section-1">
+            <div class="banner-info">
+                <div class="banner-info-text">
+                    <h2 class="banner-header">Oppskrifter som er lette å elske,<br> få ingrediensene levert på døra</h2>
+                    <p class="banner-text">Finn deilige oppskrifter, og få ingrediensene <br> levert rett hjem på døren.
+                    </p>
+                </div>
+                <div class="ukens-tips">
+                    <div>
+                        <i class="fa-solid fa-lightbulb"></i>
+                        <h3>Ukens tips!</h3>
+                    </div>
+                    <p>Rist hamburgerbrødet lett i panna med litt smør for ekstra smak.</p>
+                </div>
+                <div class="key-points">
+                    <div class="easy">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        <div class="key-info">
+                            <h3>Enkle oppskrifter</h3>
+                            <p>Oppskrifter for kokker på alle nivåer</p>
+                        </div>
+                    </div>
+                    <div class="fast">
+                        <i class="fa-solid fa-truck-fast"></i>
+                        <div class="key-info">
+                            <h3>Rask levering</h3>
+                            <p>Rask og pålitelig levering hvor som helst i Bærum</p>
+                        </div>
+                    </div>
+                    <div class="fresh">
+                        <i class="fa-solid fa-leaf"></i>
+                        <div class="key-info">
+                            <h3>Ferske råvarer</h3>
+                            <p>Alltid ferske råvarer av høy kvalitet</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-featured">
+                <div class="ukens-rett">
+                    <h3>Ukens rett!</h3>
+                    <div>
+                        <p>Cheeseburger med hamburgerdressing</p>
+                        <a href="cheeseburger.html">Se oppskriften</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-2" id="recipes">
+            <div class="container">
+                <h3>Våre oppskrifter</h3>
+                <div class="recipe-grid">
+                    <div class="card card-1">
+                        <div class="image-1"></div>
+                        <div class="card-text">
+                            <h3 class="dish-name">Butterdeigssnurrer med nduja</h3>
+                            <div class="info">
+                                <p><i class="fa-regular fa-clock"></i> 25 min</p>
+                                <p><i class="fa-solid fa-diamond"></i> Enkel</p>
+                            </div>
+                            <p class="dish-text">
+                                Butterdeigsnurrer fylt med nduja! Server
+                                snurrene som en appetittvekker før middag, eller som en snacks på festen.
+                            </p>
+                            <div class="buttons">
+                                <a href="butterdeigsnurrer.html">Se oppskriften <i class="fa-solid fa-arrow-right"></i></a>
+                                <button class="view-ingredients view-ingredients-1">Se ingredienser <i class="fa-solid fa-arrow-turn-up"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="ingredients-list ingredients-list-1">
+                            <ul>
+                                <li>
+                                    <div>
+                                        <p>Butterdeig</p>
+                                        <img src="media/butterdeig_packshot470x300.png" alt="">
+                                    </div>
+                                    <button class="add" onclick="addItemToCart(this)">Legg til i handlekurven</button>
+                                </li>
+                                <li>
+                                    <div>
+                                        <p>Nduja</p>
+                                        <img src="media/nduja.avif" alt="">
+                                    </div>
+                                    <button class="add" onclick="addItemToCart(this)">Legg til i handlekurven</button>
+                                </li>
+                                <li>
+                                    <div>
+                                        <p>Revet ost</p>
+                                        <img src="media/revet-ost.webp" alt="">
+                                    </div>
+                                    <button class="add" onclick="addItemToCart(this)">Legg til i handlekurven</button>
+                                </li>
+                                <li>
+                                    <div>
+                                        <p>Egg</p>
+                                        <img src="media/close-up-of-brown-chicken-egg-isolated-on-transparent-background-png.webp" alt="">
+                                    </div>
+                                    <button class="add" onclick="addItemToCart(this)">Legg til i handlekurven</button>
+                                </li>
+                            </ul>
+                            <button class="back-ingredients back-ingredients-1"><i class="fa-solid fa-arrow-left"></i> Tilbake</button>
+                        </div>
+                    </div>
+
+                    <div class="card card-2">
+                        <div class="image-2"></div>
+                        <div class="card-text">
+                            <h3 class="dish-name">Cheeseburger med hamburgerdressing</h3>
+                            <div class="info">
+                                <p><i class="fa-regular fa-clock"></i> 40-60 min</p>
+                                <p><i class="fa-solid fa-diamond"></i> Middels</p>
+                            </div>
+                            <p class="dish-text">
+                                Cheeseburger på grillen er en favoritt. Toppet med hjemmelaget dressing, salat, tomat og
+                                syltet rødløk.
+                            </p>
+                            <div class="buttons">
+                                <a href="cheeseburger.html">Se oppskriften <i class="fa-solid fa-arrow-right"></i></a>
+                                <button class="view-ingredients view-ingredients-2">Se ingredienser <i class="fa-solid fa-arrow-turn-up"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="ingredients-list ingredients-list-2">
+                            <ul>
+                                <li>
+                                    <div>
+                                        <p>Kjøttdeig</p>
+                                        <img src="media/ground-beef.png" alt="">
+                                    </div>
+                                    <button class="add" onclick="addItemToCart(this)">Legg til i handlekurven</button>
+                                </li>
+                                <li>
+                                    <div>
+                                        <p>Cheddarost</p>
+                                        <img src="media/cheddar.webp" alt="">
+                                    </div>
+                                    <button class="add" onclick="addItemToCart(this)">Legg til i handlekurven</button>
+                                </li>
+                                <li>
+                                    <div>
+                                        <p>Tomat</p>
+                                        <img src="media/tomatoes-on-transparent-background-png.webp" alt="">
+                                    </div>
+                                    <button class="add" onclick="addItemToCart(this)">Legg til i handlekurven</button>
+                                </li>
+                                <li>
+                                    <div>
+                                        <p>Salat</p>
+                                        <img src="media/lettuce.png" alt="">
+                                    </div>
+                                    <button class="add" onclick="addItemToCart(this)">Legg til i handlekurven</button>
+                                </li>
+                                <li>
+                                    <div>
+                                        <p>Burgerbrød</p>
+                                        <img src="media/burger-bun-with-sesame-seeds-isolated-on-transparent-background-png.webp" alt="">
+                                    </div>
+                                    <button class="add" onclick="addItemToCart(this)">Legg til i handlekurven</button>
+                                </li>
+                            </ul>
+                            <button class="back-ingredients back-ingredients-2"><i class="fa-solid fa-arrow-left"></i> Tilbake</button>
+                        </div>
+                    </div>
+
+                    <div class="card card-3">
+                        <div class="image-3"></div>
+                        <div class="card-text">
+                            <h3 class="dish-name">Smash fudge</h3>
+                            <div class="info">
+                                <p><i class="fa-regular fa-clock"></i> Over 60 min</p>
+                                <p><i class="fa-solid fa-diamond"></i> Enkel</p>
+                            </div>
+                            <p class="dish-text">
+                                Smash fudge er den ultimate kombinasjonen av salt, søtt og sprøtt! En enkel søt snacks
+                                etter middagen.
+                            </p>
+                            <div class="buttons">
+                                <a href="smashfudge.html">Se oppskriften <i class="fa-solid fa-arrow-right"></i></a>
+                                <button class="view-ingredients view-ingredients-3">Se ingredienser <i class="fa-solid fa-arrow-turn-up"></i></button>
+                            </div>
+                        </div>
+
+                        <div class="ingredients-list ingredients-list-3">
+                            <ul>
+                                <li>
+                                    <div>
+                                        <p>Søt kondensert melk</p>
+                                        <img src="media/0000097_nestle-sot-kondensert-melk-397g_550.png" alt="">
+                                    </div>
+                                    <button class="add" onclick="addItemToCart(this)">Legg til i handlekurven</button>
+                                </li>
+                                <li>
+                                    <div>
+                                        <p>Hvit sjokolade</p>
+                                        <img src="media/hvit-sjokolade.avif" alt="">
+                                    </div>
+                                    <button class="add" onclick="addItemToCart(this)">Legg til i handlekurven</button>
+                                </li>
+                                <li>
+                                    <div>
+                                        <p>Melkesjokolade</p>
+                                        <img src="media/freia-melkesjokolade-200g.png" alt="">
+                                    </div>
+                                    <button class="add" onclick="addItemToCart(this)">Legg til i handlekurven</button>
+                                </li>
+                                <li>
+                                    <div>
+                                        <p>Smash</p>
+                                        <img src="media/smash-300x300.png" alt="">
+                                    </div>
+                                    <button class="add" onclick="addItemToCart(this)">Legg til i handlekurven</button>
+                                </li>
+                            </ul>
+                            <button class="back-ingredients back-ingredients-3"><i class="fa-solid fa-arrow-left"></i> Tilbake</button>
+                        </div>
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+
+        <footer id="about">
+            <div class="container">
+                <div class="attributes">
+                    <div class="attribute">
+                        <div class="attribute-icon">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        <div class="attribute-info">
+                            <h3>Legg til ingredienser</h3>
+                            <p>Legg til ingredienser fra oppskriftene rett i handlekurven.</p>
+                        </div>
+                    </div>
+                    <div class="attribute">
+                        <div class="attribute-icon">
+                            <i class="fa-solid fa-bag-shopping"></i>
+                        </div>
+                        <div class="attribute-info">
+                            <h3>Vi plukker og pakker</h3>
+                            <p>Vi plukker ferske varer og pakker dem med omtanke.</p>
+                        </div>
+                    </div>
+                    <div class="attribute">
+                        <div class="attribute-icon">
+                            <i class="fa-solid fa-truck-fast"></i>
+                        </div>
+                        <div class="attribute-info">
+                            <h3>Levering hjem</h3>
+                            <p>Få varene levert hjem på døren når det passer deg.</p>
+                        </div>
+                    </div>
+                    <div class="attribute">
+                        <div class="attribute-icon">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+                        <div class="attribute-info">
+                            <h3>Lag mat med glede</h3>
+                            <p>Nyt matgleden og deilige måltider sammen med dine kjære.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="socials">
+                    <div class="snap">
+                        <i class="fab fa-snapchat"></i>
+                        @simen.dehlie
+                    </div>
+                    <div class="insta">
+                        <i class="fa-brands fa-instagram"></i>
+                        @simenb.dehlie
+                    </div>
+                    <div class="facebook">
+                        <i class="fa-brands fa-facebook"></i>
+                        Simen B Dehlie
+                    </div>
+                    <div class="mobil">
+                        <i class="fa-solid fa-phone"></i>
+                        902 72 924
+                    </div>
+                    <div class="mail">
+                        <i class="fa-solid fa-envelope"></i>
+                        simensen2008@outlook.com
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>
+
+    <div class="cart-page">
+            <h3 class="back"><i class="fa-solid fa-arrow-left"></i>Tilbake</h3>
+            <div class="your-cart">
+                <h2>Din handlekurv</h2>
+                <ul class="item-list">
+
+                </ul>
+            </div>
+        </div>
+
+    <script src="index-js.js"></script>
 </body>
+
 </html>
